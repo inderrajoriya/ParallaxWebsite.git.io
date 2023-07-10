@@ -1,0 +1,106 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto; /* For handling overflow cross y axis */
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+/*   background img  */
+
+.background-img {
+  transform: translateZ(-40px) scale(5);
+}
+.foreground-img {
+  transform: translateZ(-20px) scale(3);
+}
+
+.background-img,
+.foreground-img {
+  position: absolute;
+  height: 100%;
+  width: 101%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.bg {
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.bg1 {
+  background-image: url(./img/sport-1.jpg);
+}
+.bg2 {
+  background-image: url(./img/sport-2.jpg);
+}
+.bg3 {
+  background-image: url(./img/sport-3.jpg);
+}
+
+/* Font Styles */
+
+h1 {
+  position: absolute;
+  top: 11rem;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 110px;
+  color: whitesmoke;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  font-size: 1.3rem;
+  padding: 0 10rem;
+  margin: 5rem 0;
+  text-align: justify;
+}
+
+section {
+  background-color: rgb(45, 45, 45);
+  color: white;
+  padding: 5rem 0;
+}
+
+.secHeading {
+  font-size: 4.1rem;
+  padding: 0 10rem;
+}
+
+.desc {
+  position: absolute;
+  padding: 0.3rem 2.6rem;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-30%) translateX(-10%);
+  background-color: white;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  border-radius: 5%;
+}
